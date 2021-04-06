@@ -52,7 +52,7 @@ GET /
 ```
 ##### Response
 **Status**
-200
+200  
 **Body**
 ```
 Hello!
@@ -66,7 +66,7 @@ GET /users
 ```
 ##### Response
 **Status**
-200
+200  
 **Body schema**
 ```js
 {
