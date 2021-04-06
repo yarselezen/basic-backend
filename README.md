@@ -58,7 +58,7 @@ Hello!
 ```
 ### User API
 #### Get users
-Returns the list of users
+Returns the list of users  
 **Request**  
 ```
 GET /users
@@ -109,7 +109,7 @@ Body example
 ]
 ```
 #### Create a user
-Creates a new user
+Creates a new user  
 **Request**   
 ```
 POST /users
