@@ -45,7 +45,6 @@ The server will start on 127.0.0.1:5000
 
 ## Server API
 #### Say hello
-Greets the user
 **Request**  
 ```
 GET /
@@ -58,7 +57,6 @@ Hello!
 ```
 ### User API
 #### Get users
-Returns the list of users  
 **Request**  
 ```
 GET /users
@@ -109,7 +107,6 @@ Body example
 ]
 ```
 #### Create a user
-Creates a new user  
 **Request**   
 ```
 POST /users
