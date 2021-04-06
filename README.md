@@ -44,7 +44,7 @@ And run the image as a Docker container:
 The server will start on 127.0.0.1:5000
 
 ## Server API
-#### Say hello
+### Say hello
 **Request**  
 ```
 GET /
@@ -55,15 +55,14 @@ Body
 ```
 Hello!
 ```
-### User API
-#### Get users
+### Get users
 **Request**  
 ```
 GET /users
 ```
 **Response**  
 Status: 200  
-Body schema  
+Body schema:  
 ```js
 {
   "type": "array",
@@ -86,7 +85,7 @@ Body schema
   }
 }
 ```
-Body example
+Body example:
 ```js
 [
   {
@@ -106,12 +105,12 @@ Body example
   }
 ]
 ```
-#### Create a user
+### Create a user
 **Request**   
 ```
 POST /users
 ```
-Body schema  
+Body schema:  
 ```js
 {
   "type": "object",
@@ -131,7 +130,7 @@ Body schema
   }
 }
 ```
-Body example  
+Body example:  
 ```js
 {
     "first_name": "Oleg",
