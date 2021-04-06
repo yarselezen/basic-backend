@@ -3,7 +3,7 @@ The project represents a simple server app with an embedded database providing a
 
 ## Technologies
 ### Frameworks  
-- [Bottle](https://bottlepy.org/docs/dev/) as HTTP server framework
+- [Bottle](https://bottlepy.org/docs/dev/) is used as HTTP server framework
 ### Libraries
 - [CuttlePool](https://pypi.org/project/cuttlepool/) is an implementation of a database connection pool
 ### Database 
