@@ -42,3 +42,105 @@ And run the image as a Docker container:
 ~ docker run --publish 127.0.0.1:5000:5000 basic-backend
 ```
 The server will start on 127.0.0.1:5000
+
+## Server API
+#### Say hello
+Greets the user
+##### Request
+```
+GET /
+```
+##### Response
+**Status**
+200
+**Body**
+```
+Hello!
+```
+### User API
+#### Get users
+Returns the list of users
+##### Request
+```
+GET /users
+```
+##### Response
+**Status**
+200
+**Body schema**
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "first_name": {
+        "description": "The first name of the user",
+        "type": "string"
+      },
+      "last_name": {
+        "description": "The last name of the user",
+        "type": "string"
+      },
+      "phone": {
+        "description": "The phone of the user",
+        "type": "string"
+      }
+    }
+  }
+}
+**Body example**
+```
+[
+  {
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "phone": "+79111111111"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "phone": "+449111111111"
+  },
+  {
+    "first_name": "Johann",
+    "last_name": "Schmidt",
+    "phone": "+499111111111"
+  }
+]
+```
+#### Create a user
+Creates a new user
+##### Request
+```
+POST /users
+```
+**Body schema**
+**Body schema**
+{
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "description": "The first name of the user",
+      "type": "string"
+    },
+    "last_name": {
+      "description": "The last name of the user",
+      "type": "string"
+    },
+    "phone": {
+      "description": "The phone of the user",
+      "type": "string"
+    }
+  }
+}
+**Body example**
+```
+{
+    "first_name": "Oleg",
+    "last_name": "Petrov",
+    "phone": "+79850000000"
+}
+```
+##### Response
+**Status**
+201
