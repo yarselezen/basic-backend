@@ -46,28 +46,26 @@ The server will start on 127.0.0.1:5000
 ## Server API
 #### Say hello
 Greets the user
-##### Request
+**Request**  
 ```
 GET /
 ```
-##### Response
-**Status**
-200  
-**Body**
+**Response**  
+Status: 200  
+Body
 ```
 Hello!
 ```
 ### User API
 #### Get users
 Returns the list of users
-##### Request
+**Request**  
 ```
 GET /users
 ```
-##### Response
-**Status**
-200  
-**Body schema**
+**Response**  
+Status: 200  
+Body schema  
 ```js
 {
   "type": "array",
@@ -90,7 +88,7 @@ GET /users
   }
 }
 ```
-**Body example**
+Body example
 ```js
 [
   {
@@ -112,11 +110,11 @@ GET /users
 ```
 #### Create a user
 Creates a new user
-##### Request
+**Request**   
 ```
 POST /users
 ```
-**Body schema**
+Body schema  
 ```js
 {
   "type": "object",
@@ -136,7 +134,7 @@ POST /users
   }
 }
 ```
-**Body example**
+Body example  
 ```js
 {
     "first_name": "Oleg",
@@ -144,6 +142,5 @@ POST /users
     "phone": "+79850000000"
 }
 ```
-##### Response
-**Status**
-201
+**Response**  
+Status: 201
