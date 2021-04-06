@@ -68,6 +68,7 @@ GET /users
 **Status**
 200
 **Body schema**
+```js
 {
   "type": "array",
   "items": {
@@ -88,8 +89,9 @@ GET /users
     }
   }
 }
-**Body example**
 ```
+**Body example**
+```js
 [
   {
     "first_name": "Ivan",
@@ -115,7 +117,7 @@ Creates a new user
 POST /users
 ```
 **Body schema**
-**Body schema**
+```js
 {
   "type": "object",
   "properties": {
@@ -133,8 +135,9 @@ POST /users
     }
   }
 }
-**Body example**
 ```
+**Body example**
+```js
 {
     "first_name": "Oleg",
     "last_name": "Petrov",
