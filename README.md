@@ -29,8 +29,9 @@ To run server on 0.0.0.0 pass the host and a port:
 ```sh
 ~ python main.py 0.0.0.0 5000
 ```  
-
-## Starting server in Docker
+## Before you start in [Docker](https://www.docker.com/)
+Make sure you have Docker installed  
+## Starting server in Docker(https://www.docker.com/)
 The repository contains [Dockerfile](https://github.com/kisliakovsky/basic-backend/blob/main/Dockerfile).  
 To start the server in Docker you should [build a Docker image from the Dockerfile](https://docs.docker.com/language/python/build-images/#build-an-image):  
 ```sh
