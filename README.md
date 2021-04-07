@@ -13,6 +13,10 @@ The project represents a simple server app with an embedded database providing a
 Make sure you have [Python](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/quickstart/) installed  
 
 ## Launch from the command line
+Install dependencies by executing the following command from the command line:  
+```sh
+~ pip install -r requirements.txt
+```  
 Execute the following command from the command line:  
 ```sh
 ~ python main.py
