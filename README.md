@@ -9,10 +9,10 @@ The project represents a simple server app with an embedded database providing a
 ### Database 
 [SQLite](https://www.sqlite.org/index.html)
 
-## Before you start
+## Prerequisites
 Make sure you have [Python](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/quickstart/) installed  
 
-## Starting server
+## Launch from the command line
 Execute the following command from the command line:  
 ```sh
 ~ python main.py
@@ -29,9 +29,10 @@ To run server on 0.0.0.0 pass the host and a port:
 ```sh
 ~ python main.py 0.0.0.0 5000
 ```  
-## Before you start in Docker
+## Prerequisites
 Make sure you have [Docker](https://www.docker.com/) installed  
-## Starting server in Docker
+
+## Launch in Docker
 The repository contains [Dockerfile](https://github.com/kisliakovsky/basic-backend/blob/main/Dockerfile).  
 To start the server in Docker you should [build a Docker image from the Dockerfile](https://docs.docker.com/language/python/build-images/#build-an-image):  
 ```sh
