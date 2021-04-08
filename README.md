@@ -145,3 +145,132 @@ Body example:
 ```
 **Response**  
 Status: 201
+=====================================================================================
+# basic-backend
+Проект представляет собой простое серверное приложение со встроенной базой данных и REST API для операций создания и чтения.
+
+## Технологии
+### Фреймворки  
+- [Bottle](https://bottlepy.org/docs/dev/) используется в качестве фреймворка для создания HTTP-сервера
+### Библиотеки
+- [CuttlePool](https://pypi.org/project/cuttlepool/) -  реализация пула соединений с базой данных
+### База данных 
+[SQLite](https://www.sqlite.org/index.html)
+
+## Подготовка
+Убедитесь, что у вас установлены [Python](https://www.python.org/) и [pip](https://pip.pypa.io/en/stable/quickstart/)  
+
+## Запуск из командной строки
+Установите зависимости, выполнив следующую команду в командной строке:  
+```sh
+~ pip install -r requirements.txt
+```  
+Для запуска сервера выполните следующую команду:  
+```sh
+~ python main.py
+```  
+По умолчанию сервер будет доступен по адресу 127.0.0.1:8080  
+  
+Чтобы выбрать другой порт, укажите его как аргумент при запуске. Например,
+```sh
+~ python main.py 5000
+```  
+Сервер будет доступен при обращении к указанному порту
+
+## API сервера
+### Поприветствать
+**Запрос**  
+```
+GET /
+```
+**Ответ**  
+Статус ответа: 200  
+Тело ответа:
+```
+Hello!
+```
+### Получить список пользователей
+**Запрос**  
+```
+GET /users
+```
+**Ответ**  
+Статус ответа: 200  
+JSON-схема ответа:  
+```js
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "first_name": {
+        "description": "The first name of the user",
+        "type": "string"
+      },
+      "last_name": {
+        "description": "The last name of the user",
+        "type": "string"
+      },
+      "phone": {
+        "description": "The phone of the user",
+        "type": "string"
+      }
+    }
+  }
+}
+```
+Пример тела ответа:
+```js
+[
+  {
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "phone": "+79111111111"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "phone": "+449111111111"
+  },
+  {
+    "first_name": "Johann",
+    "last_name": "Schmidt",
+    "phone": "+499111111111"
+  }
+]
+```
+### Создай пользователя
+**Запрос**   
+```
+POST /users
+```
+JSON-схема тела запроса:  
+```js
+{
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "description": "The first name of the user",
+      "type": "string"
+    },
+    "last_name": {
+      "description": "The last name of the user",
+      "type": "string"
+    },
+    "phone": {
+      "description": "The phone of the user",
+      "type": "string"
+    }
+  }
+}
+```
+Пример тела ответа:  
+```js
+{
+    "first_name": "Oleg",
+    "last_name": "Petrov",
+    "phone": "+79850000000"
+}
+```
+**Ответ**  
+Статус ответа: 201
