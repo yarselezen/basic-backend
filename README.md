@@ -28,11 +28,6 @@ To choose another port you can pass it as a command line argument:
 ~ python main.py 5000
 ```  
 The server will start on 127.0.0.1:5000  
-  
-To run server on 0.0.0.0 pass the host and a port:  
-```sh
-~ python main.py 0.0.0.0 5000
-```  
 ## Prerequisites
 Make sure you have [Docker](https://www.docker.com/) installed  
 
