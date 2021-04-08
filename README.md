@@ -172,7 +172,17 @@ Status: 201
 ~ python main.py 5000
 ```  
 Сервер будет доступен при обращении к указанному порту
-
+## Запуск в Docker-контейнере
+В репозитории лежит [Dockerfile](https://github.com/kisliakovsky/basic-backend/blob/main/Dockerfile).  
+С помощью него можно [создать Docker-образ](https://docs.docker.com/language/python/build-images/#build-an-image), выполнив следующую команду:  
+```sh
+~ docker build --tag basic-backend .
+```
+А затем запустить Docker-контейнер на основе полученного образа:  
+```sh
+~ docker run --publish 127.0.0.1:5000:5000 basic-backend
+```
+Сервер будет достпуен по адресу 127.0.0.1:5000
 ## API сервера
 ### Поприветствать
 **Запрос**  
