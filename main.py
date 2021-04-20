@@ -24,6 +24,4 @@ def main():
         raise ValueError("Port '{}' is invalid".format(port))
     App(Bottle(autojson=False), host, int(port), Path('./db/main.db')).launch()
 
-
-
 main()
