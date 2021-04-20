@@ -25,5 +25,4 @@ def main():
     App(Bottle(autojson=False), host, int(port), Path('./db/main.db')).launch()
 
 
-
 main()
