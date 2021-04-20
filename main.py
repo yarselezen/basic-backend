@@ -1,3 +1,4 @@
+
 import sys
 from pathlib import Path
 
@@ -22,6 +23,7 @@ def main():
     if not port.isdigit():
         raise ValueError("Port '{}' is invalid".format(port))
     App(Bottle(autojson=False), host, int(port), Path('./db/main.db')).launch()
+
 
 
 main()
